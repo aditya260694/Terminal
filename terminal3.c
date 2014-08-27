@@ -662,11 +662,6 @@ int main()
 
 			int closing,status1;
 
-			//for(closing=0;closing<num_pipe-1;closing++)
-			//{
-			//	printf("\nwaiting\n");
-			//	printf("\n %d \n",waitpid(-1,&status1,0));
-			//}
 			ex=chk;
 				
 				tcsetpgrp(STDIN_FILENO,child);
@@ -682,11 +677,6 @@ int main()
 				}
 				if(bkg!=1)
 				sleep(1);
-			/*	for(closing=0;closing<2*num_pipe+1;closing++)
-				{
-					printf("waiting\n");
-					waitpid(0,0,0);
-				}*/
 				tcsetpgrp(STDIN_FILENO,super);
 				ex=0;
 		}	
